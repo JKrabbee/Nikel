@@ -40,10 +40,10 @@ header {
   border: none;
   padding: 0.5vw;
 }
-.btn-login:hover {
+.btn-login:hover,
+.btn-default:hover {
   background-color: #4c0070d0;
   cursor: pointer;
-  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .link-default {
@@ -58,4 +58,12 @@ header {
 
 .icon-current {
   font-size: 50px;
+}
+
+.btn-default {
+  border-radius: 0.5vw;
+  background-color: #4c0070;
+  color: #ffffff;
+  border: none;
+  padding: 1vw;
 }

@@ -73,3 +73,7 @@ header {
   bottom: 1rem;
   right: 2rem;
 }
+
+.logout{
+  min-width: 3rem !important;
+}

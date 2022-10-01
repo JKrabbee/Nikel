@@ -14,7 +14,7 @@
   <title>NIKEL - Home</title>
 </head>
 
-<body id="app">
+<body id="app" class="overflow-hidden">
   <header>
     <nav class="navbar navbar-expand bg-white">
       <div class="container-fluid">
@@ -35,9 +35,9 @@
               <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="bi bi-person-circle fs-4"></i>
               </button>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu logout">
                 <li>
-                  <a class="dropdown-item text-danger" href="/public/index.html">Sair</a>
+                  <button id="btn-logout" class="dropdown-item text-danger" href="/public/index.html">Sair</button>
                 </li>
               </ul>
             </div>
@@ -53,7 +53,7 @@
         <div class="col d-flex justify-content-between">
           <div class="d-flex align-items-center">
             <i class="bi bi-cash-coin icon-current color-primary me-3"></i>
-            <span class="fs-2">R$ 3788.20</span>
+            <span class="fs-2" id="total">R$ 0.00</span>
           </div>
           <div>
             <img src="/assets/images/coins.png" alt="" />
@@ -77,16 +77,19 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
-                <div class="container"></div>
+              <div class="col-6 ">
+                <div class="container p-0" id="cash-in-list">
+
+                </div>
               </div>
+
               <div class="col-6">
-                <div class="container"></div>
+                <div class="container p-0" id="cash-out-list">
+
+                </div>
               </div>
               <div class="col-12">
-                <a href="/public/transacoes.html">
-                  <button class="btn-default" type="button">Ver Todas</button>
-                </a>
+                <button class="btn-default" type="button" id="transaction-btn">Ver Todas</button>
               </div>
             </div>
           </div>
@@ -112,15 +115,15 @@
             <div class="modal-body">
               <div class="mb-3">
                 <label for="value-input" class="form-label">Valor</label>
-                <input type="number" class="form-control" id="value-input" />
+                <input required type="number" class="form-control" id="value-input" />
               </div>
               <div class="mb-3">
                 <label for="description-input" class="form-label">Descrição</label>
-                <input type="text" class="form-control" id="description-input" />
+                <input required type="text" class="form-control" id="description-input" />
               </div>
               <div class="mb-3">
                 <label for="date-input" class="form-label">Data</label>
-                <input type="date" class="form-control" id="date-input" />
+                <input required type="date" class="form-control" id="date-input" />
               </div>
               <div class="mb-3">
                 <div class="form-check form-check-inline">
@@ -148,6 +151,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
+  <script src="/public/js/home.js"></script>
 </body>
 
 </html>

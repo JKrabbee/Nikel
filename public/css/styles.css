@@ -61,11 +61,11 @@ header {
 }
 
 .btn-default {
-  border-radius: 0.5vw;
+  border-radius: 0.5rem;
   background-color: #4c0070;
   color: #ffffff;
   border: none;
-  padding: 0.5vw;
+  padding: 0.5rem;
 }
 
 .btn-float {
